@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generating random data for minimum and maximum digit values
+min_value = np.random.randint(50, 100)
+max_value = np.random.randint(100, 150)
+
+# Calculating the support level as the average of the minimum and maximum values
+support_level = (min_value + max_value) / 2
+
+print(f"Minimum value: {min_value}")
+print(f"Maximum value: {max_value}")
+print(f"Support level: {support_level}")
+
+# Plotting the graph
+plt.figure(figsize=(8, 6))
+plt.plot([0, 1], [min_value, max_value], marker='o', color='b', label='Values')
+plt.axhline(y=support_level, color='r', linestyle='--', label='Support Level')
+plt.xlabel('Time')
+plt.ylabel('Value')
+plt.title('Graph of Support Level Calculation')
+plt.legend()
+plt.show()
+```
